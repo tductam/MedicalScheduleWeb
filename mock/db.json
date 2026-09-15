@@ -1,0 +1,489 @@
+{
+  "doctors": [
+    {
+      "academicDegree": "TS",
+      "id": 4791,
+      "image": null,
+      "name": "Vũ Việt Hằng",
+      "specialization": "Y học cổ truyền"
+    },
+    {
+      "academicDegree": "ThsBS",
+      "id": 4627,
+      "image": null,
+      "name": "Vũ Văn Tiến",
+      "specialization": "Tai mũi họng"
+    },
+    {
+      "academicDegree": "PGSTS",
+      "id": 15616,
+      "image": null,
+      "name": "Vũ Văn Du",
+      "specialization": "Phụ khoa"
+    },
+    {
+      "academicDegree": "ThsBS",
+      "id": 13850,
+      "image": "https://isofhcare-backup.s3-ap-southeast-1.amazonaws.com/admindym/995ea65c-46d1-4c62-88bf-f5793bc9ef98.png",
+      "name": "Vưu Tiêu Hà",
+      "specialization": "Sản phụ khoa"
+    },
+    {
+      "academicDegree": "ThsBSNT",
+      "id": 9831,
+      "image": null,
+      "name": "Vũ Thùy Linh",
+      "specialization": "Dị ứng – Miễn dịch lâm sàng"
+    },
+    {
+      "academicDegree": "BSCKII",
+      "id": 4951,
+      "image": null,
+      "name": "Vũ Thu Phương",
+      "specialization": "Da liễu"
+    },
+    {
+      "academicDegree": "PGSTS",
+      "id": 4932,
+      "image": null,
+      "name": "Vũ Thị Thanh Huyền",
+      "specialization": "Nội tiết – Đái tháo đường"
+    },
+    {
+      "academicDegree": "ThsBS",
+      "id": 4815,
+      "image": null,
+      "name": "Vũ Thị Quỳnh Hà",
+      "specialization": "Răng hàm mặt"
+    },
+    {
+      "academicDegree": "TSBS",
+      "id": 9594,
+      "image": null,
+      "name": "Vũ Thị Quế Anh",
+      "specialization": "Mắt"
+    },
+    {
+      "academicDegree": "BSCKII",
+      "id": 4858,
+      "image": null,
+      "name": "Vũ Thị Minh Châu",
+      "specialization": "Huyết học - Truyền máu"
+    }
+  ],
+  "schedules": [
+    {
+      "id": 532315,
+      "doctorId": "4932",
+      "date": "2026-09-15",
+      "time": "06:30",
+      "status": "FULL",
+      "medicalService": "Khám Nội tiết  [K.KCBTYC]",
+      "price": 450000.0,
+      "departmentId": "170",
+      "specializationId": "567",
+      "roomName": "A2.3 - Nội tiết – Đái tháo đường",
+      "roomPlace": "Phòng 3, Tầng 3, Nhà A2",
+      "capacity": 0,
+      "blockTime": 30,
+      "note": "BS Không khám BN có BHYT chuyển tuyến"
+    },
+    {
+      "id": 531862,
+      "date": "2026-09-19",
+      "time": "07:30",
+      "status": "AVAILABLE",
+      "medicalService": "Khám Tai mũi họng [PKĐK CG]",
+      "price": 350000.0,
+      "departmentId": "308",
+      "specializationId": "589",
+      "roomName": "TCG.P404 - Nội soi TMH",
+      "roomPlace": "Tầng 4, Phòng 404",
+      "capacity": 3,
+      "blockTime": 30,
+      "note": "Không nhận khám BHYT",
+      "doctorId": "4627"
+    }
+  ],
+  "timeSlots": [
+    {
+      "id": 1,
+      "scheduleId": "532315",
+      "time": "06:30",
+      "status": "FULL",
+      "capacity": 0
+    },
+    {
+      "id": 2,
+      "scheduleId": "532315",
+      "time": "07:00",
+      "status": "AVAILABLE",
+      "capacity": 4
+    },
+    {
+      "id": 3,
+      "scheduleId": "532315",
+      "time": "07:30",
+      "status": "FULL",
+      "capacity": 0
+    },
+    {
+      "id": 4,
+      "scheduleId": "532315",
+      "time": "08:00",
+      "status": "AVAILABLE",
+      "capacity": 2
+    },
+    {
+      "id": 5,
+      "scheduleId": "532315",
+      "time": "08:30",
+      "status": "FULL",
+      "capacity": 0
+    }
+  ],
+
+  "departments": [
+    {
+      "id": 189,
+      "name": "Khoa Khám bệnh",
+      "description": "Số 1 Tôn Thất Tùng, Đống Đa, Hà Nội",
+      "hospitalInfo": {
+        "syncId": 1000000,
+        "syncName": "Bệnh viện Đại học Y ( Cơ sở Tôn Thất Tùng)"
+      }
+    },
+    {
+      "id": 713,
+      "name": "Khoa Khám bệnh - Cơ sở Hoàng Mai",
+      "description": "Ngõ 587 Tam Trinh, Yên Sở, Hoàng Mai, Hà Nội.",
+      "hospitalInfo": {
+        "syncId": 1000004,
+        "syncName": "Bệnh viện Đại học Y Hà Nội - Cơ sở Hoàng Mai"
+      }
+    },
+    {
+      "id": 170,
+      "name": "Khoa Khám chữa bệnh theo yêu cầu",
+      "description": "Số 1 Tôn Thất Tùng, Đống Đa, Hà Nội\n",
+      "hospitalInfo": {
+        "syncId": 1000000,
+        "syncName": "Bệnh viện Đại học Y ( Cơ sở Tôn Thất Tùng)"
+      }
+    },
+    {
+      "id": 308,
+      "name": "Phòng khám đa khoa - Cơ sở Cầu Giấy.",
+      "description": "Số 10, Trương Công Giai, Cầu Giấy, Hà Nội",
+      "hospitalInfo": {
+        "syncId": 1000002,
+        "syncName": "Phòng Khám Đa Khoa Cầu Giấy"
+      }
+    },
+    {
+      "id": 1389,
+      "name": "Phòng khám đa khoa - Cơ sở Vĩnh Hưng",
+      "description": "Số 9, Ngõ 475 phố Lĩnh Nam, phường Vĩnh Hưng, TP.Hà Nội",
+      "hospitalInfo": {
+        "syncId": 1000006,
+        "syncName": "Bệnh viện Đại học Y Hà Nội - Cơ sở Vĩnh Hưng"
+      }
+    },
+    {
+      "id": 197,
+      "name": "Trung tâm Y khoa số 1 Tôn Thất Tùng",
+      "description": "Số 1 Tôn Thất Tùng, Đống Đa, Hà Nội",
+      "hospitalInfo": {
+        "syncId": 1000000,
+        "syncName": "Bệnh viện Đại học Y ( Cơ sở Tôn Thất Tùng)"
+      }
+    },
+    {
+      "id": 165,
+      "name": "TT YHGĐ & CSSK cộng đồng",
+      "description": "Số 1 Tôn Thất Tùng, Đống Đa, Hà Nội\n",
+      "hospitalInfo": {
+        "syncId": 1000000,
+        "syncName": "Bệnh viện Đại học Y ( Cơ sở Tôn Thất Tùng)"
+      }
+    }
+  ],
+
+  "specializations": [
+    {
+      "id": 557,
+      "name": "Bác sỹ gia đình",
+      "description": "- Kiểm tra sức khỏe tổng quát định kỳ, tầm soát ung thư - Mệt mỏi, đau mỏi toàn thân, ăn kém, mất ngủ, sút cân - Có nhiều bệnh liên quan đến nhiều chuyên khoa…"
+    },
+    {
+      "id": 145,
+      "name": "Chẩn Đoán Hình Ảnh",
+      "description": "X quang, Siêu âm, CT, MRI"
+    },
+    {
+      "id": 60,
+      "name": "Chuyên Khoa Đa Khoa",
+      "description": null
+    },
+    {
+      "id": 477,
+      "name": "Chuyên khoa Mắt",
+      "description": null
+    },
+    {
+      "id": 6,
+      "name": "Chuyên khoa Phụ khoa",
+      "description": null
+    },
+    {
+      "id": 24,
+      "name": "Chuyên khoa Siêu âm",
+      "description": null
+    },
+    {
+      "id": 597,
+      "name": "Da liễu",
+      "description": "- Triệu chứng về khô da và tổn thương da: · Da khô, bong tróc, nứt nẻ hoặc có vảy trắng, đặc biệt ở các vùng gấp như khuỷu tay, đầu gối. · Sẹo lồi, sẹo lõm, vết thâm sau mụn hoặc vết thương. · Vết thương do côn trùng đốt hoặc vết loét lâu lành. - Triệu chứng về mụn và các vấn đề về da: · Mụn, mụn trứng cá, đặc biệt nếu mụn không cải thiện sau khi điều trị thông thường. · Nổi mụn nước, phỏng rộp hoặc vết đỏ trên da mà không khỏi sau một thời gian. · Dị ứng da, viêm da dị ứng, chàm, hoặc các phản ứng dị ứng với mỹ phẩm, thuốc hoặc thực phẩm. - Triệu chứng về thay đổi màu sắc da: · Vết thâm, nám, hoặc sự thay đổi màu sắc của da không rõ nguyên nhân. · Da đổi màu hoặc có dấu hiệu lạ như da sáng hơn hoặc tối hơn bình thường, đặc biệt là khi có dấu hiệu ung thư da. - Triệu chứng liên quan đến rụng tóc:· Rụng tóc hoặc tóc mỏng đi, thưa dần …"
+    },
+    {
+      "id": 556,
+      "name": "Dinh dưỡng",
+      "description": "- Thiếu hụt dinh dưỡng: · Thiếu hụt dinh dưỡng, có dấu hiệu thiếu vitamin hoặc khoáng chất (ví dụ: da khô, tóc rụng, móng tay yếu). · Chế độ ăn uống không cân bằng, thiếu chất xơ, protein hoặc các nhóm thực phẩm thiết yếu khác. - Vấn đề về cân bằng nước: · Vấn đề về cân bằng nước, như cảm giác khát nước liên tục hoặc tiểu ít, tiểu nhiều. - Chế độ ăn uống sau phẫu thuật hoặc điều trị bệnh: · Chế độ ăn uống sau phẫu thuật hoặc điều trị bệnh, cần tư vấn dinh dưỡng phù hợp để phục hồi. - Tiền sử bệnh lý liên quan đến dinh dưỡng: · Tiền sử bệnh lý liên quan đến dinh dưỡng, như béo phì, tiểu đường, bệnh tim mạch, hoặc các rối loạn chuyển hóa …"
+    },
+    {
+      "id": 559,
+      "name": "Dị ứng – Miễn dịch lâm sàng",
+      "description": "- Phát ban da, ngứa ngáy không rõ nguyên nhân, hoặc da nổi mẩn đỏ, sưng phù. - Sưng mặt, môi, mắt hoặc các bộ phận khác của cơ thể sau khi ăn hoặc tiếp xúc với một số chất. - Khó thở, thở khò khè, ho, cảm giác nghẹt thở khi tiếp xúc với khói, bụi, hoặc các yếu tố kích thích. - Chảy nước mũi, hắt hơi liên tục, ngứa họng, đau mắt khi thay đổi thời tiết hoặc tiếp xúc với phấn hoa, lông thú. - Phản ứng sau tiêm vaccine, thuốc hoặc hóa chất …"
+    },
+    {
+      "id": 595,
+      "name": "Gây mê hồi sức",
+      "description": null
+    },
+    {
+      "id": 551,
+      "name": " Giấy Khám sức khỏe",
+      "description": null
+    },
+    {
+      "id": 582,
+      "name": "Huyết học - Truyền máu",
+      "description": "- Thiếu máu: Mệt mỏi, da xanh xao, chóng mặt, yếu cơ, khó thở khi vận động nhẹ. - Chảy máu bất thường: Chảy máu mũi, chảy máu răng, bầm tím dưới da không rõ nguyên nhân. - Xuất huyết dưới da: Dễ bị bầm tím hoặc chảy máu dưới da khi va chạm nhẹ. - Tiền sử gia đình mắc các bệnh về máu: Như bệnh huyết tán, thiếu máu di truyền hoặc bệnh máu ác tính …"
+    },
+    {
+      "id": 1126,
+      "name": "IVF",
+      "description": null
+    },
+    {
+      "id": 994,
+      "name": "Khám Bảo hiểm y tế - Nội khoa",
+      "description": null
+    },
+    {
+      "id": 995,
+      "name": "Khám cấp giấy chứng nhận sức khỏe: Đi học, đi làm, lái xe,..",
+      "description": null
+    },
+    {
+      "id": 548,
+      "name": "Ký sinh trùng",
+      "description": "- Ngứa hậu môn: · Ngứa hậu môn, đặc biệt là vào ban đêm, hoặc có cảm giác khó chịu ở vùng hậu môn. - Vấn đề tiêu hóa: · Vấn đề tiêu hóa, như đầy bụng, buồn nôn, hoặc chướng hơi sau khi ăn. - Ra máu trong phân: · Ra máu trong phân hoặc phân có lẫn nhầy, có thể kèm theo mùi hôi. - Tiền sử tiếp xúc với môi trường ô nhiễm: · Có tiền sử tiếp xúc với môi trường ô nhiễm, ăn uống không vệ sinh hoặc du lịch đến vùng có nguy cơ cao bị nhiễm ký sinh trùng. - Nổi mẩn ngứa: · Nổi mẩn ngứa, phát ban trên da mà không rõ nguyên nhân …"
+    },
+    {
+      "id": 590,
+      "name": "Mắt",
+      "description": "- Kiểm tra hoặc khám các vấn đề khó chịu liên quan đến bộ phận Mắt…"
+    },
+    {
+      "id": 13,
+      "name": "Mắt",
+      "description": "Chăm sóc và điều trị các vấn đề về mắt."
+    },
+    {
+      "id": 553,
+      "name": "Nam học",
+      "description": "- Rối loạn cương dương: · Rối loạn cương dương, khó đạt được hoặc duy trì sự cương cứng khi quan hệ tình dục. - Xuất tinh sớm: · Xuất tinh sớm, không thể kiểm soát được việc xuất tinh trong quan hệ tình dục. - Giảm ham muốn tình dục: · Giảm ham muốn tình dục, mất hứng thú hoặc cảm giác không có nhu cầu quan hệ. - Đau khi quan hệ tình dục: · Đau khi quan hệ tình dục, đau hoặc khó chịu khi quan hệ tình dục. - Vấn đề về khả năng sinh sản: · Vấn đề về khả năng sinh sản, khó có con mặc dù đã cố gắng trong một thời gian dài. - Sự thay đổi về kích thước tinh hoàn: · Sự thay đổi về kích thước tinh hoàn hoặc có cảm giác đau, sưng ở vùng tinh hoàn. - Mệt mỏi, giảm năng lượng: · Mệt mỏi, giảm năng lượng, thiếu sức sống, hoặc cảm thấy yếu ớt không rõ lý do. - Vấn đề về hormone: · Vấn đề về hormone như thay đổi giọng nói, tóc rụng, hoặc sự thay đổi bất thường về hình thể (tăng mỡ bụng, giảm cơ bắp). - Suy giảm khả năng sinh lý: · Suy giảm khả năng sinh lý, gặp khó khăn trong việc duy trì sự cương cứng hoặc giao hợp …"
+    },
+    {
+      "id": 562,
+      "name": "Ngoại Chấn thương - Chỉnh hình",
+      "description": "- Đau dữ dội hoặc kéo dài sau chấn thương, đặc biệt ở khớp, xương hoặc cơ – có thể liên quan đến tổn thương mô mềm hoặc xương. - Sưng, bầm tím, hoặc có khối u vùng chấn thương – dấu hiệu tụ máu, viêm hoặc chấn thương nặng. - Biến dạng xương hoặc khớp, không thể cử động bình thường – cảnh báo gãy xương hoặc trật khớp. - Gãy xương hoặc nghi ngờ gãy sau tai nạn, va chạm mạnh - Lệch, trật khớp, khớp không vào đúng vị trí sau chấn thương …"
+    },
+    {
+      "id": 998,
+      "name": "Ngoại Hậu môn ",
+      "description": "- Chảy máu hậu môn, đặc biệt khi đi đại tiện – thường liên quan đến bệnh trĩ, nứt hậu môn, polyp hoặc ung thư trực tràng. \n- Đau hậu môn, đau khi rặn hoặc sau đại tiện – dấu hiệu cảnh báo nứt hậu môn, áp-xe, rò hậu môn hoặc viêm tuyến hậu môn. \n- Sa búi trĩ hoặc khối bất thường ở hậu môn – biểu hiện của trĩ ngoại, trĩ nội sa ra ngoài, sa trực tràng hoặc khối u vùng hậu môn. \n- Rỉ dịch, mủ, hoặc nước hôi từ vùng hậu môn – nghi ngờ rò hậu môn, áp-xe quanh hậu môn, nhiễm trùng tuyến hậu môn - Tiền sử táo bón kéo dài, rặn nhiều khi đi ngoài hoặc từng có phẫu thuật hậu môn trực tràng"
+    },
+    {
+      "id": 594,
+      "name": "Ngoại khoa",
+      "description": null
+    },
+    {
+      "id": 56,
+      "name": "Ngoại khoa",
+      "description": "Chuyên về các ca phẫu thuật, bao gồm cả phẫu thuật tổng quát và các chuyên ngành con như phẫu thuật tim mạch, phẫu thuật thận, vv."
+    },
+    {
+      "id": 561,
+      "name": "Ngoại Thần kinh – Cột sống",
+      "description": "- Đau đầu dữ dội, kéo dài hoặc thường xuyên – có thể liên quan đến u não, tăng áp lực nội sọ hoặc tổn thương thần kinh trung ương. - Mờ mắt hoặc mất thị lực đột ngột – dấu hiệu nghi ngờ khối u chèn ép thần kinh thị giác hoặc tổn thương não. - Đau cột sống cổ, lưng lan xuống tay hoặc chân – cảnh báo thoát vị đĩa đệm, hẹp ống sống cần can thiệp ngoại khoa. - Bệnh lý bẩm sinh như gù, vẹo cột sống gây đau hoặc hạn chế vận động – cần đánh giá điều trị chỉnh hình hoặc can thiệp phẫu thuật. - Tiền sử phẫu thuật u não hoặc tuyến yên …"
+    },
+    {
+      "id": 564,
+      "name": "Ngoại Tiết niệu",
+      "description": "- Đau bụng dưới hoặc đau hông lưng hai bên, đặc biệt khi đi tiểu – có thể là dấu hiệu của bệnh lý thận như sỏi thận, viêm thận. - Tiểu máu, nước tiểu có màu đỏ hoặc nâu – cảnh báo tổn thương niệu đạo, thận, bàng quang hoặc có khối u. - Tiểu rắt, tiểu buốt, tiểu khó, tiểu không hết – dấu hiệu phổ biến của viêm đường tiết niệu hoặc bàng quang tăng hoạt. - Khối u hoặc cục cứng ở vùng bụng dưới, sờ thấy lạ ở vùng thận hoặc bàng quang – cần tầm soát u tiết niệu. - Tiền sử bệnh tiết niệu như sỏi thận, viêm bàng quang, nhiễm trùng tiết niệu tái phát …"
+    },
+    {
+      "id": 563,
+      "name": "Ngoại Tiêu hóa",
+      "description": "- Đau bụng dữ dội, đặc biệt vùng hạ sườn phải hoặc bụng dưới – thường liên quan đến viêm ruột thừa, viêm túi mật hoặc tắc ruột. - Bụng cứng, đau khi sờ nắn – dấu hiệu cảnh báo viêm phúc mạc, thủng tạng rỗng, cần can thiệp ngoại khoa khẩn cấp. - Nôn kéo dài, có thể kèm máu hoặc dịch màu nâu – nghi ngờ tắc ruột hoặc xuất huyết tiêu hóa trên. - Đại tiện ra máu, phân đen, phân nhầy, có mùi hôi đặc biệt – biểu hiện của xuất huyết hoặc viêm loét đường tiêu hóa dưới. - Có tiền sử phẫu thuật tiêu hóa hoặc bệnh lý dạ dày – ruột – gan mật …"
+    },
+    {
+      "id": 599,
+      "name": "Nhi khoa",
+      "description": "- Khám cho tất cả các trẻ dưới 16 tuổi muốn kiểm tra sức khỏe định kỳ hoặc có các triệu chứng bệnh lý nội khoa, ngoại khoa…"
+    },
+    {
+      "id": 475,
+      "name": " Nhi Khoa",
+      "description": "Chăm sóc và điều trị cho trẻ em."
+    },
+    {
+      "id": 568,
+      "name": "Nội Cơ xương khớp",
+      "description": "- Đau khớp, đau cơ kéo dài, đặc biệt khi vận động hoặc thay đổi thời tiết – dấu hiệu thường gặp trong thoái hóa khớp, viêm khớp, đau cơ mạn tính. - Sưng, đỏ, nóng ở các khớp, kèm theo cảm giác đau nhức – biểu hiện viêm khớp cấp hoặc mạn. - Khó cử động, cứng khớp vào buổi sáng hoặc sau khi ngồi lâu – điển hình trong viêm khớp dạng thấp, thoái hóa khớp. - Mất hoặc giảm khả năng vận động: đi lại khó khăn, khó leo cầu thang, cúi người – cho thấy ảnh hưởng chức năng vận động do bệnh lý cơ xương khớp. - Tê bì, yếu tay chân do tổn thương dây thần kinh – thường gặp trong thoát vị đĩa đệm, thoái hóa cột sống chèn ép rễ thần kinh …"
+    },
+    {
+      "id": 565,
+      "name": "Nội Hô hấp",
+      "description": "- Khó thở, thở khò khè, cảm giác hụt hơi khi gắng sức hoặc cả khi nghỉ ngơi – triệu chứng của các bệnh như hen phế quản, COPD, suy hô hấp. - Thở rít, nghe tiếng bất thường khi thở – gợi ý tắc nghẽn đường thở. - Ho ra máu, đờm có lẫn máu – có thể liên quan đến lao phổi, ung thư phổi, giãn phế quản. - Ngủ ngáy to, ngưng thở khi ngủ – dấu hiệu của hội chứng ngưng thở khi ngủ, liên quan đến nhiều biến chứng tim phổi. - Tiền sử mắc các bệnh hô hấp mạn tính như hen phế quản, COPD, viêm phổi, lao phổi – yếu tố nền rất quan trọng để xác định hướng chẩn đoán và điều trị …"
+    },
+    {
+      "id": 600,
+      "name": "Nội khoa",
+      "description": "- Kiểm tra sức khỏe tổng quát định kỳ, tầm soát ung thư - Mệt mỏi, đau mỏi toàn thân, ăn kém, mất ngủ, sút cân - Có nhiều triệu chứng khó chịu ở nhiều bộ phận, cơ quan trong cơ thể mà chưa xác định ở quan nào…"
+    },
+    {
+      "id": 569,
+      "name": "Nội thần kinh",
+      "description": "- Đau đầu kéo dài: Đau dữ dội, có thể kèm buồn nôn hoặc nôn. - Nói khó, nuốt khó, méo miệng, yếu nửa người – nghi ngờ tai biến mạch máu não. - Rối loạn vận động: Run tay chân, cứng cơ, đi lại khó khăn. - Tê yếu tay chân: Cảm giác như kim châm hoặc mất cảm giác. - Chóng mặt, mất thăng bằng: Dễ té ngã, cảm giác không ổn định …"
+    },
+    {
+      "id": 566,
+      "name": "Nội Thận – Tiết niệu",
+      "description": "- Tiểu rắt, tiểu buốt, tiểu khó, tiểu không hết bãi – dấu hiệu của viêm đường tiết niệu, sỏi hoặc tắc nghẽn. - Tiểu máu, nước tiểu có lẫn máu, màu đỏ hoặc nâu – cảnh báo tổn thương thận, bàng quang hoặc niệu đạo. - Tiểu nhiều ban đêm, tiểu gấp, không kiểm soát – có thể liên quan đến rối loạn chức năng bàng quang hoặc bệnh lý thận. - Phù chân, phù mặt không rõ nguyên nhân – triệu chứng quan trọng của suy thận hoặc hội chứng thận hư. - Có tiền sử mắc bệnh lý thận như sỏi thận, viêm thận, suy thận mạn tính …"
+    },
+    {
+      "id": 1079,
+      "name": "Nội tiết",
+      "description": null
+    },
+    {
+      "id": 567,
+      "name": "Nội tiết – Đái tháo đường",
+      "description": "- Khát nước nhiều, tiểu nhiều, ăn nhiều, gầy nhiều – các triệu chứng điển hình của bệnh đái tháo đường - Mệt mỏi, mắt mờ, tê tay chân, vết thương lâu lành – biến chứng thường gặp của đái tháo đường. - Tim đập nhanh, run tay, ra nhiều mồ hôi, sụt cân không rõ lý do – triệu chứng của cường giáp. - Táo bón, tăng cân nhanh – dấu hiệu điển hình của suy giáp. - Cổ có bướu, nuốt vướng, nghẹn khi ăn hoặc uống – gợi ý bệnh lý tuyến giáp (bướu cổ, u tuyến giáp) …"
+    },
+    {
+      "id": 634,
+      "name": "Nội Tim mạch",
+      "description": null
+    },
+    {
+      "id": 41,
+      "name": "Nội tổng hợp",
+      "description": "Điều trị các bệnh lý tổng quát và không phẫu thuật."
+    },
+    {
+      "id": 560,
+      "name": "Phẫu thuật tạo hình – Thẩm mỹ",
+      "description": null
+    },
+    {
+      "id": 587,
+      "name": "Phục hồi chức năng",
+      "description": "- Đau cổ vai gáy, đau cột sống lưng, đau các khớp – ảnh hưởng đến vận động, cần điều trị hỗ trợ và phục hồi. - Mất khả năng thực hiện các hoạt động hàng ngày như ăn uống, tự chăm sóc – do tai biến, chấn thương, hoặc bệnh mạn tính. - Tê bì, yếu tay chân do bệnh lý thần kinh hoặc sau đột quỵ – cần phục hồi vận động và chức năng. - Cần phục hồi sau phẫu thuật (như thay khớp, mổ thoát vị đĩa đệm, sau chấn thương…) – để sớm lấy lại khả năng vận động. - Trẻ em chậm phát triển vận động hoặc trí tuệ – cần can thiệp sớm để cải thiện chức năng và phát triển toàn diện …"
+    },
+    {
+      "id": 1128,
+      "name": "Phụ khoa",
+      "description": null
+    },
+    {
+      "id": 591,
+      "name": "Phụ sản ",
+      "description": "- Vấn đề về chu kỳ kinh nguyệt: · Kinh nguyệt không đều, chảy máu bất thường ngoài kỳ kinh. · Đau bụng dưới, đau vùng chậu, hoặc có cảm giác nặng bụng, đau khi quan hệ. - Vấn đề về sinh sản và khả năng thụ thai: · Khó thụ thai, vấn đề về sinh sản, không có thai dù đã cố gắng trong một thời gian dài. - Vấn đề về khí hư và âm đạo: · Khí hư bất thường, có mùi hôi, màu sắc thay đổi (vàng, xanh, có máu) hoặc ngứa âm đạo. - Các vấn đề trong thai kỳ: · Kiểm tra thai định kỳ, thai ngoài tử cung, ra máu hoặc triệu chứng bất thường trong suốt thai kỳ. - Dấu hiệu mãn kinh: · Dấu hiệu mãn kinh, như bốc hỏa, đổ mồ hôi ban đêm, thay đổi tâm trạng hoặc mất ngủ. - Tiền sử bệnh lý phụ khoa: · Người bệnh có tiền sử u nang buồng trứng, u xơ tử cung, hoặc các vấn đề về cổ tử cung. - Vấn đề về vú: · Đau vú, ngực sưng đau, có nốt u cục trong vú …"
+    },
+    {
+      "id": 588,
+      "name": "Răng hàm mặt",
+      "description": "- Kiểm tra hoặc khám các vấn đề khó chịu liên quan đến bộ phận Răng Hàm mặt…"
+    },
+    {
+      "id": 14,
+      "name": "Răng Hàm Mặt",
+      "description": "Chăm sóc và điều trị về răng và hàm mặt."
+    },
+    {
+      "id": 1129,
+      "name": "Sản khoa",
+      "description": null
+    },
+    {
+      "id": 48,
+      "name": "Sản phụ khoa",
+      "description": "Chăm sóc thai kỳ và các vấn đề liên quan đến phụ nữ"
+    },
+    {
+      "id": 589,
+      "name": "Tai mũi họng",
+      "description": "- Kiểm tra hoặc khám các vấn đề khó chịu liên quan đến bộ phận Tai Mũi Họng…"
+    },
+    {
+      "id": 554,
+      "name": "Tâm bệnh",
+      "description": "· Buồn chán, mất hứng thú với mọi thứ xung quanh kéo dài trên 2 tuần → gợi ý trầm cảm · Lo âu quá mức, sợ hãi vô lý, khó kiểm soát → gợi ý rối loạn lo âu · Nghe thấy tiếng nói không có thật, nghi ngờ bị theo dõi → gợi ý rối loạn tâm thần · Mất ngủ kéo dài, kích thích, nói nhiều, hành vi khác thường → có thể gặp trong rối loạn lưỡng cực · Có ý định hoặc hành vi tự làm hại bản thân …"
+    },
+    {
+      "id": 11,
+      "name": "Tâm lý",
+      "description": "Chăm sóc và điều trị các vấn đề tâm lý và tâm thần."
+    },
+    {
+      "id": 570,
+      "name": "Tiêu hóa",
+      "description": "- Chướng bụng, đầy hơi, ợ hơi, ợ chua,buồn nôn, nôn – thường gặp trong trào ngược dạ dày thực quản, rối loạn tiêu hóa. - Rối loạn tiêu hóa kéo dài: tiêu chảy, táo bón, phân bất thường. Đi ngoài ra máu, phân đen, phân nhầy – gợi ý viêm đại tràng, trĩ, xuất huyết tiêu hóa, ung thư đường tiêu hóa. - Sụt cân không rõ nguyên nhân, chán ăn, mệt mỏi – dấu hiệu cảnh báo bệnh mạn tính hoặc ác tính trong hệ tiêu hóa. - Vàng da, vàng mắt, nước tiểu sẫm màu – triệu chứng đặc trưng của bệnh lý gan, mật như viêm gan, tắc mật …"
+    },
+    {
+      "id": 571,
+      "name": "Tim mạch",
+      "description": "- Đau tức ngực, cảm giác bóp nghẹt ngực – dấu hiệu gợi ý thiếu máu cơ tim hoặc bệnh mạch vành. - Tim đập nhanh, hồi hộp, loạn nhịp – liên quan đến rối loạn nhịp tim. - Chóng mặt, choáng váng, ngất xỉu – có thể do rối loạn nhịp, tụt huyết áp, suy tim. - Khó thở, mệt khi đi bộ hoặc làm việc nhẹ – triệu chứng của suy tim hoặc bệnh lý van tim. - Huyết áp cao hoặc thấp bất thường – dấu hiệu của nhiều bệnh tim mạch"
+    },
+    {
+      "id": 545,
+      "name": "Truyền nhiễm",
+      "description": "- Sốt cao kéo dài, không rõ nguyên nhân – có thể là dấu hiệu của nhiễm trùng hoặc bệnh lý tự miễn. - Nổi mẩn đỏ, phát ban da, ngứa hoặc có vết loét không lành – có thể liên quan đến các bệnh lý tự miễn hoặc bệnh da liễu.Tiêu chảy kéo dài, nôn mửa, bụng đau quặn hoặc đầy hơi – có thể là triệu chứng của nhiễm trùng đường tiêu hóa hoặc rối loạn miễn dịch. - Vàng da, vàng mắt, phân nhạt màu – có thể liên quan đến bệnh lý gan hoặc nhiễm trùng. - Tiếp xúc với người mắc bệnh truyền nhiễm, hoặc có các yếu tố nguy cơ như đi du lịch đến khu vực có dịch bệnh – yếu tố nguy cơ quan chẩn đoán bệnh truyền nhiễm …"
+    },
+    {
+      "id": 573,
+      "name": "Tư vấn di truyền",
+      "description": "- Tình trạng sức khỏe bất thường không rõ nguyên nhân: · Tình trạng sức khỏe bất thường không rõ nguyên nhân và nghi ngờ liên quan đến gen hoặc di truyền. - Nguy cơ mắc bệnh di truyền: · Cần tìm hiểu về nguy cơ mắc các bệnh di truyền trong tương lai, đặc biệt nếu có yếu tố di truyền trong gia đình. - Bệnh lý rối loạn di truyền: · Bệnh lý rối loạn di truyền liên quan đến hệ miễn dịch, thần kinh, cơ xương khớp hoặc rối loạn chuyển hóa - Khám tiền hôn nhân …"
+    },
+    {
+      "id": 592,
+      "name": "Ung bướu",
+      "description": "- Sờ thấy khối u ở bất kỳ vị trí nào, có thể đau hoặc không – là dấu hiệu cảnh báo khối u lành tính hoặc ác tính. - Thay đổi kích thước, hình dạng của nốt ruồi, u cục có sẵn – nghi ngờ u ác tính hoặc ung thư da. - Chảy máu bất thường từ miệng, mũi, trực tràng, âm đạo, hoặc tiểu máu – có thể là dấu hiệu của ung thư hệ tiêu hóa, niệu dục hoặc phụ khoa. - Sụt cân không rõ nguyên nhân, mệt mỏi kéo dài – dấu hiệu chung của bệnh lý ung thư tiến triển. - Thay đổi thói quen đại/tiểu tiện kéo dài, như tiêu chảy, táo bón hoặc tiểu ra máu – có thể liên quan đến ung thư đại trực tràng hoặc bàng quang …"
+    },
+    {
+      "id": 558,
+      "name": "Viêm gan virus và nhiễm trùng",
+      "description": "- Vàng da, vàng mắt – dấu hiệu của các bệnh lý về gan hoặc mật.Mệt mỏi kéo dài, cảm giác không có năng lượng, uể oải, chán ăn, buồn nôn hoặc nôn mửa – có thể là triệu chứng của viêm gan hoặc bệnh gan mạn tính. - Đau bụng trên, thường cảm thấy khó chịu ở vùng bụng phải dưới xương sườn – có thể liên quan đến viêm gan, sỏi mật hoặc các vấn đề về gan. - Nước tiểu sẫm màu, phân nhạt màu hoặc có mùi bất thường – dấu hiệu của tắc mật hoặc bệnh lý gan mật. - Tiền sử tiếp xúc với người mắc viêm gan virus, đặc biệt là viêm gan B hoặc C…"
+    },
+    {
+      "id": 596,
+      "name": "Y học cổ truyền",
+      "description": "- Mong muốn điều trị bệnh bằng phương pháp đông y: · Mong muốn điều trị bệnh bằng phương pháp đông y như châm cứu, xoa bóp, bấm huyệt, dùng thuốc thảo dược. - Các vấn đề về xương khớp: · Bị đau nhức xương khớp, đau mỏi vai gáy, đau lưng, thoái hóa. - Các vấn đề về sức khỏe chung: · Gặp các vấn đề về mất ngủ, mệt mỏi, suy nhược cơ thể, rối loạn tiêu hóa. - Phục hồi chức năng: · Muốn phục hồi chức năng sau tai biến, liệt nhẹ, yếu nửa người. - Phương pháp điều trị kết hợp: · Y học cổ truyền phù hợp với người mong muốn điều trị kết hợp giữa y học hiện đại và phương pháp truyền thống, ít xâm lấn …"
+    }
+  ]
+}
