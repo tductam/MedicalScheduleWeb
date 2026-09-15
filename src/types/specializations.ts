@@ -1,5 +1,5 @@
 export type Specialization = {
-  id: number;
+  id: number | string;
   name: string;
   description?: string;
 };
