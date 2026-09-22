@@ -1,4 +1,5 @@
 export type ProfileInfo = {
+  id: string | number;
   avatar?: string;
   fullName: string;
   mobileNumber: string;

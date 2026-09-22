@@ -1,6 +1,6 @@
-type TimeSlot = {
+export type TimeSlot = {
   id: number | string;
-  scheduleId: string;
+  scheduleId: number | string;
   time: string;
   status: "FULL" | "AVAILABLE";
   capacity: number;

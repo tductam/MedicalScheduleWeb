@@ -1,5 +1,5 @@
 export type Department = {
-  id: number | string;
+  id: number;
   name: string;
   description: string;
 };
