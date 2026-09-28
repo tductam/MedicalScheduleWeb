@@ -10,7 +10,12 @@ export function Home() {
     <div className="bg-[url('https://benhviendaihocyhanoi.isofhcare.vn/image/bg-dhy.png')] bg-bottom bg-cover min-h-svh flex flex-col flex-1">
       <div className="max-w-340 mx-auto px-4 py-5 flex flex-col flex-1">
         <div className="flex justify-end">
-          <Link to={ROUTES.profile}>Cá nhân</Link>
+          <Link
+            className="px-2 text-zinc-600 uppercase bg-zinc-300 rounded-lg font-bold"
+            to={ROUTES.profile}
+          >
+            Cá nhân
+          </Link>
         </div>
         <div className="grid grid-cols-1 lg:grid-cols-2 flex-1 items-center gap-10 mt-10 ">
           <div className="flex flex-col items-center text-center">

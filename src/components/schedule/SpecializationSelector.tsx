@@ -3,11 +3,18 @@ import type { Specialization } from "@/types/specializations";
 import { useEffect, useRef, useState } from "react";
 import { CircleQuestionMark } from "lucide-react";
 import { useSearchParams } from "react-router";
+import { Loading } from "../ui/Loading";
+import { Error } from "../ui/Error";
 
 export function SpecializationSelector() {
   const [searchParams, setSearchParams] = useSearchParams();
 
-  const { data: specializations, isLoading, isError } = useSpecializations();
+  const {
+    data: specializations = [],
+    isLoading,
+    isError,
+    refetch,
+  } = useSpecializations();
 
   const [query, setQuery] = useState("");
   const [isOpen, setIsOpen] = useState(false);
@@ -66,28 +73,40 @@ export function SpecializationSelector() {
             onChange={(e) => setQuery(e.target.value)}
             placeholder={"Tìm kiếm các chuyên khoa"}
           ></input>
-          <ul className="overflow-auto max-h-80 flex flex-col ">
-            <li onClick={handleSelectAll} className="hover:bg-blue-200 p-2">
-              Tất cả các chuyên khoa
-            </li>
-            {filterSpecialization?.map((specialization) => (
-              <li
-                className="flex items-center gap-2 p-2 hover:bg-blue-200"
-                key={specialization.id}
-                onClick={() => handleSelect(specialization)}
-              >
-                <span>{specialization.name} </span>
-                {specialization.description && (
-                  <span className="relative group">
-                    <CircleQuestionMark className="h-4 w-4" />
-                    <div className="absolute p-2 bg-black text-white rounded-md w-60 hidden group-hover:block text-[14px]">
-                      {specialization.description}
-                    </div>
-                  </span>
-                )}
+          {isLoading ? (
+            <Loading />
+          ) : isError ? (
+            <Error
+              message="Lỗi khi tải danh sách chuyên khoa"
+              onRetry={refetch}
+            />
+          ) : (
+            <ul className="overflow-auto max-h-90 flex flex-col ">
+              <li onClick={handleSelectAll} className="hover:bg-blue-200 p-2">
+                Tất cả các chuyên khoa
               </li>
-            ))}
-          </ul>
+              {filterSpecialization?.map((specialization) => (
+                <li
+                  className="flex relative items-center gap-2 p-2 hover:bg-blue-200"
+                  key={specialization.id}
+                  onClick={() => handleSelect(specialization)}
+                >
+                  <span>{specialization.name} </span>
+                  {specialization.description && (
+                    <span className=" group">
+                      <CircleQuestionMark className="h-4 w-4" />
+                      <div
+                        onClick={(e) => e.stopPropagation()}
+                        className="absolute right-0 p-2 bg-black text-white rounded-md  hidden group-hover:block text-[14px] z-20"
+                      >
+                        {specialization.description}
+                      </div>
+                    </span>
+                  )}
+                </li>
+              ))}
+            </ul>
+          )}
         </div>
       )}
     </div>

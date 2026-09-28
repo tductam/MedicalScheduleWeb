@@ -1,3 +1,5 @@
+import type { Doctor } from "./doctors";
+
 export type TimeSlot = {
   id: number | string;
   scheduleId: number | string;
@@ -19,3 +21,5 @@ export type Schedule = {
   note?: string;
   timeSlots: TimeSlot[];
 };
+
+export type DoctorBySchedule = Schedule & { doctor: Doctor };

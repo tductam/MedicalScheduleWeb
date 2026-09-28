@@ -4,9 +4,11 @@ import { useSearchParams } from "react-router";
 import type { ScheduleParams } from "@/services/scheduleApi";
 import { useState } from "react";
 import { Search, UserGroup } from "lucide-react";
+import { Loading } from "../ui/Loading";
+import { Error } from "../ui/Error";
 
 export function DoctorList() {
-  const [searchParams, setSearchParams] = useSearchParams();
+  const [searchParams] = useSearchParams();
   const [query, setQuery] = useState("");
 
   const departmentId = searchParams.get("departmentId") || undefined;
@@ -20,16 +22,16 @@ export function DoctorList() {
     departmentId,
     specializationId,
   };
-  const { data: doctors } = useDoctor(params);
+  const { data: doctors = [], isLoading, isError, refetch } = useDoctor(params);
 
   const filterDoctors = doctors?.filter(
     (doctor) =>
-      doctor.doctor.name.toLowerCase().includes(query.toLowerCase()) ||
-      doctor.doctor.specialization.toLowerCase().includes(query.toLowerCase()),
+      doctor.name.toLowerCase().includes(query.toLowerCase()) ||
+      doctor.specialization.toLowerCase().includes(query.toLowerCase()),
   );
 
   return (
-    <div className="flex flex-col gap-3 min-h-150">
+    <div className="flex flex-1 flex-col gap-3 min-h-150">
       <div className="flex flex-wrap gap-3 justify-between items-center p-5 border border-zinc-200 rounded-2xl bg-white shadow-sm ">
         <div className="flex flex-1 gap-2 border border-zinc-300 rounded-lg p-2">
           <Search className="w-5 h-5" />
@@ -49,16 +51,17 @@ export function DoctorList() {
           </span>
         </div>
       </div>
-      {filterDoctors?.length === 0 ? (
-        <div className="flex justify-center mt-5">Không tìm thấy bác sĩ nào phù hợp.</div>
+      {isLoading ? (
+        <Loading />
+      ) : isError ? (
+        <Error message="Lỗi khi tải danh sách bác sĩ" onRetry={refetch} />
+      ) : filterDoctors?.length === 0 ? (
+        <div className="flex justify-center mt-5 text-zinc-500">
+          Không tìm thấy bác sĩ nào phù hợp.
+        </div>
       ) : (
         filterDoctors?.map((doctor) => (
-          <DoctorItem
-            key={doctor.doctorId}
-            doctor={doctor.doctor}
-            doctorId={doctor.doctorId}
-            price={doctor.price}
-          />
+          <DoctorItem key={doctor.id} doctor={doctor} price={doctor.price} />
         ))
       )}
     </div>

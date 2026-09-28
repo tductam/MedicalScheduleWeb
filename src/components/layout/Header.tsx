@@ -3,7 +3,7 @@ import { logoHeader } from "@/assets";
 
 export function Header() {
   return (
-    <header className="w-full">
+    <header className="w-full sticky top-0 bg-white z-50 border-b border-zinc-300">
       <div className="max-w-340 mx-auto flex justify-between items-center px-3 py-2.5">
         <Link to="/">
           <img

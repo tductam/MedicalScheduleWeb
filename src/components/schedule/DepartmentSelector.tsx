@@ -3,11 +3,18 @@ import { useEffect, useRef, useState } from "react";
 
 import { useSearchParams } from "react-router";
 import { useDepartments } from "@/hooks/useDepartments";
+import { Loading } from "../ui/Loading";
+import { Error } from "../ui/Error";
 
 export function DepartmentSelector() {
   const [searchParams, setSearchParams] = useSearchParams();
 
-  const { data: departments, isLoading, isError } = useDepartments();
+  const {
+    data: departments = [],
+    isLoading,
+    isError,
+    refetch,
+  } = useDepartments();
   const [query, setQuery] = useState("");
   const [isOpen, setIsOpen] = useState(false);
 
@@ -65,20 +72,26 @@ export function DepartmentSelector() {
             onChange={(e) => setQuery(e.target.value)}
             placeholder={"Tìm kiếm cơ sở"}
           ></input>
-          <ul className="overflow-auto max-h-80  flex flex-col ">
-            <li onClick={handleSelectAll} className="hover:bg-blue-200 p-2">
-              Tất cả các cơ sở
-            </li>
-            {filterDepartment?.map((department) => (
-              <li
-                className="flex items-center gap-2 p-2 hover:bg-blue-200"
-                key={department.id}
-                onClick={() => handleSelect(department)}
-              >
-                <span>{department.name} </span>
+          {isLoading ? (
+            <Loading />
+          ) : isError ? (
+            <Error message="Lỗi khi tải các cơ sở" onRetry={refetch} />
+          ) : (
+            <ul className="overflow-auto max-h-90  flex flex-col ">
+              <li onClick={handleSelectAll} className="hover:bg-blue-200 p-2">
+                Tất cả các cơ sở
               </li>
-            ))}
-          </ul>
+              {filterDepartment?.map((department) => (
+                <li
+                  className="flex items-center gap-2 p-2 hover:bg-blue-200"
+                  key={department.id}
+                  onClick={() => handleSelect(department)}
+                >
+                  <span>{department.name} </span>
+                </li>
+              ))}
+            </ul>
+          )}
         </div>
       )}
     </div>

@@ -5,3 +5,5 @@ export type Doctor = {
   image?: string;
   specialization: string;
 };
+
+export type GroupedDoctorSchedule = Doctor & { price: number[] };

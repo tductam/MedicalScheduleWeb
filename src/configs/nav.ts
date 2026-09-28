@@ -29,6 +29,6 @@ export const NAV = [
     icon: CalendarClock,
     text1: "Lịch khám",
     text2: "Quản lý các lịch khám đã đặt",
-    to: "#",
+    to: ROUTES.booking,
   },
 ];

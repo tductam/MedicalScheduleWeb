@@ -5,12 +5,11 @@ import { DoctorSchedulesDetail } from "./DoctorSchedulesDetail";
 import { useState } from "react";
 
 type DoctorItemProps = {
-  doctorId: string;
   doctor: Doctor;
   price: number[];
 };
 
-export function DoctorItem({ doctorId, doctor, price }: DoctorItemProps) {
+export function DoctorItem({ doctor, price }: DoctorItemProps) {
   const [isOpen, setIsOpen] = useState(false);
 
   function handleClick() {
@@ -19,12 +18,16 @@ export function DoctorItem({ doctorId, doctor, price }: DoctorItemProps) {
 
   return (
     <div className="border border-zinc-200 rounded-2xl bg-white shadow-sm transition-all duration-200 hover:-translate-y-1 hover:border-blue-300 hover:shadow-lg">
-      <div className="flex items-center p-4 gap-2">
-        <div className="border rounded-full p-3">
-          {doctor.image ? (
-            <img src={doctor.image} alt={doctor.name} className="h-5" />
+      <div className="flex items-center p-4 gap-2 border-b border-b-zinc-300">
+        <div className="border rounded-full">
+          {doctor?.image ? (
+            <img
+              src={doctor.image}
+              alt={doctor.name}
+              className="h-12 w-12 rounded-full object-cover"
+            />
           ) : (
-            <User className="" />
+            <User className="h-8 w-8 m-2" />
           )}
         </div>
         <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center w-full">
@@ -42,10 +45,11 @@ export function DoctorItem({ doctorId, doctor, price }: DoctorItemProps) {
 
               <span className="text-amber-600 text-[22px] font-semibold">
                 {price.length >= 2 ? (
-                  <>
-                    {formatPrice(Math.min(...price))} <span>-</span>{" "}
-                    {formatPrice(Math.max(...price))}
-                  </>
+                  <div>
+                    <span>{formatPrice(Math.min(...price))}</span>
+                    <span> - </span>
+                    <span>{formatPrice(Math.max(...price))}</span>
+                  </div>
                 ) : (
                   formatPrice(price[0])
                 )}
@@ -54,14 +58,14 @@ export function DoctorItem({ doctorId, doctor, price }: DoctorItemProps) {
 
             <button
               onClick={handleClick}
-              className="border bg-blue-700 rounded-md font-semibold text-white h-12 w-30"
+              className="border bg-blue-700 rounded-md font-semibold text-white h-12 w-30 shrink-0"
             >
               {isOpen ? "Ẩn lịch" : "Chọn"}
             </button>
           </div>
         </div>
       </div>
-      {isOpen && <DoctorSchedulesDetail doctorId={doctorId} />}
+      {isOpen && <DoctorSchedulesDetail doctor={doctor} />}
     </div>
   );
 }

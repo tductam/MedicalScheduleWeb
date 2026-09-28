@@ -1,6 +1,6 @@
-import type { Doctor } from "@/types/doctors";
+import type { GroupedDoctorSchedule } from "@/types/doctors";
 import { apiClient } from "./apiClient";
-import type { Schedule, TimeSlot } from "@/types/schedules";
+import type { DoctorBySchedule, Schedule, TimeSlot } from "@/types/schedules";
 import type { Department } from "@/types/departments";
 
 export interface ScheduleParams {
@@ -9,14 +9,6 @@ export interface ScheduleParams {
   specializationId?: string;
   departmentId?: string;
 }
-
-export type GroupedDoctorSchedule = {
-  doctorId: string;
-  doctor: Doctor;
-  price: number[];
-};
-
-export type DoctorBySchedule = Schedule & { doctor: Doctor };
 
 export async function fetchDoctorBySchedules(
   filters?: ScheduleParams,
@@ -42,8 +34,11 @@ export async function fetchDoctorBySchedules(
       }
     } else {
       map.set(item.doctorId, {
-        doctorId: item.doctorId,
-        doctor: item.doctor,
+        id: item.doctor.id,
+        academicDegree: item.doctor.academicDegree,
+        name: item.doctor.name,
+        image: item.doctor.image,
+        specialization: item.doctor.specialization,
         price: [item.price],
       });
     }

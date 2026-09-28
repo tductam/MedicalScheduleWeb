@@ -6,6 +6,7 @@ import { Profile } from "@/pages/Profile";
 import { NotFound } from "@/pages/NotFound";
 import { Home } from "@/pages/Home";
 import { ROUTES } from "@/routes/routes";
+import { Booking } from "./pages/Booking";
 
 export const router = createBrowserRouter([
   {
@@ -20,6 +21,10 @@ export const router = createBrowserRouter([
       {
         path: ROUTES.schedule,
         Component: Schedule,
+      },
+      {
+        path: ROUTES.booking,
+        Component: Booking,
       },
       {
         path: ROUTES.notFound,
